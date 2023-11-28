@@ -25,3 +25,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## WEBAPI
+To Use WebAPI "http://devfasih-001-site1.htempurl.com/" Use This Link i've Build GET,POST,GET_BY_ID,POST_BY_ID,DELETE API's for use. 
+Get : "http://devfasih-001-site1.htempurl.com/api/employee"
+Post : "http://devfasih-001-site1.htempurl.com/api/employee"
+Get{id} : "http://devfasih-001-site1.htempurl.com/api/employee/?:id"
+Put : "http://devfasih-001-site1.htempurl.com/api/employee/?:id"
+Delete : "http://devfasih-001-site1.htempurl.com/api/employee/?:id"
