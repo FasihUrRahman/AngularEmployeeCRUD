@@ -1,0 +1,56 @@
+<div class="container my-5">
+    <h1 class="mb-3">Update Employee</h1>
+    <div class="row">
+      <div class="col-6">
+        <form #form="ngForm" (ngSubmit)="updateEmployee()">
+            <div class="mb-3">
+                <label for="InputId" class="form-label">Id</label>
+                <input type="text" class="form-control" id="InputId" name="id" [(ngModel)] = "employeeDetails.id" disabled>
+              </div>
+              <div class="mb-3">
+                <label for="InputFirstName" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="InputFirstName" name="firstName" [(ngModel)] = "employeeDetails.firstName">
+              </div>
+              <div class="mb-3">
+                <label for="InputLastName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="InputLastName" name="lastName" [(ngModel)] = "employeeDetails.lastName">
+              </div>
+              <div class="mb-3">
+                <label for="InputDOB" class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" id="InputDOB" name="dob" [(ngModel)] = "employeeDetails.dateOfBirth">
+              </div>
+              <div class="mb-3">
+                <div class="form-floating">
+                  <select class="form-select" id="InputGender" aria-label="Floating label select" name="gender" [(ngModel)] = "employeeDetails.gender">
+                    <option selected>Open this select menu</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Prefer not to say">Prefer not to say</option>
+                  </select>
+                  <label for="InputGender">Gender</label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="InputDateofJoin" class="form-label">Date of Join</label>
+                <input type="date" class="form-control" id="InputDateofJoin" name="joinedOn" [(ngModel)] = "employeeDetails.joinedOn">
+              </div>
+              <div class="mb-3">
+                <label for="InputAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="InputAddress" name="address" [(ngModel)] = "employeeDetails.address">
+              </div>
+              <div class="mb-3">
+                <div class="form-floating">
+                  <select class="form-select" id="InputCountry" aria-label="Floating label select" name="country" [(ngModel)] = "employeeDetails.country">
+                    <option selected>Open this select menu</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="United State">United State</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                  </select>
+                  <label for="InputGender">Country</label>
+                </div>
+              </div>
+            <button type="submit" class="btn btn-primary me-2">Save</button> <a class="btn btn-danger" aria-current="page" routerLink="/employees">Back</a>
+        </form>
+      </div>
+    </div>
+</div>
