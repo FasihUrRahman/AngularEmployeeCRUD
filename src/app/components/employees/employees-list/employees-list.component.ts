@@ -10,9 +10,11 @@ import { EmployeesService } from 'src/app/services/employees.service';
 })
 export class EmployeesListComponent implements OnInit {
   employees: Employee[] = [];
+  userName: string | null = null;
   constructor(private empoloyeesService: EmployeesService, private router:Router) { }
 
   ngOnInit(): void {
+    this.userName = localStorage.getItem("name");
     this.empoloyeesService.getAllEmployess()
     .subscribe({
       next: (employees) => {

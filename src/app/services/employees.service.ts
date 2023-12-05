@@ -10,14 +10,13 @@ import { Observable } from 'rxjs';
 export class EmployeesService {
 
   baseApiUrl:string = environment.baseApiUrl;
-  
   constructor(private http: HttpClient) { }
 
   getAllEmployess(): Observable<Employee[]>{
     return this.http.get<Employee[]>(this.baseApiUrl + '/api/employee');
   }
 
-  addEmployee(addEmployeeRequest: Employee): Observable<Employee>{
+  addEmployee(addEmployeeRequest: FormData): Observable<Employee>{
     return this.http.post<Employee>(this.baseApiUrl+'/api/employee', addEmployeeRequest);
   }
 

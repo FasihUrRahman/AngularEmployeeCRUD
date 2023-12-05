@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseApiUrl: 'http://devfasih-001-site1.htempurl.com'
+  baseApiUrl: 'https://localhost:7231',
+  accessToken: sessionStorage.getItem('accessToken')
 };
 
 /*

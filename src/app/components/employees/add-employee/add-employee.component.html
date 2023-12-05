@@ -1,52 +1,50 @@
-<div class="container my-5">
-    <h1 class="mb-3">Add New Employee</h1>
-    <div class="row">
-      <div class="col-6">
-        <form #form="ngForm" (ngSubmit)="addEmployee()">
-            <div class="mb-3">
-              <label for="InputFirstName" class="form-label">First Name</label>
-              <input type="text" class="form-control" id="InputFirstName" name="name" [(ngModel)] = "addEmployeeRequest.firstName">
-            </div>
-            <div class="mb-3">
-              <label for="InputLastName" class="form-label">Last Name</label>
-              <input type="text" class="form-control" id="InputLastName" name="name" [(ngModel)] = "addEmployeeRequest.lastName">
-            </div>
-            <div class="mb-3">
-              <label for="InputDOB" class="form-label">Date of Birth</label>
-              <input type="date" class="form-control" id="InputDOB" name="dob" [(ngModel)] = "addEmployeeRequest.dateOfBirth">
-            </div>
-            <div class="mb-3">
-              <div class="form-floating">
-                <select class="form-select" id="InputGender" aria-label="Floating label select example" name="gender" [(ngModel)] = "addEmployeeRequest.gender">
-                  <option selected disabled>Open this select menu</option>
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
-                  <option value="Prefer not to say">Prefer not to say</option>
-                </select>
-                <label for="InputGender">Gender</label>
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="InputDateofJoin" class="form-label">Date of Join</label>
-              <input type="date" class="form-control" id="InputDateofJoin" name="joinedOn" [(ngModel)] = "addEmployeeRequest.joinedOn">
-            </div>
-            <div class="mb-3">
-              <label for="InputAddress" class="form-label">Address</label>
-              <input type="text" class="form-control" id="InputAddress" name="address" [(ngModel)] = "addEmployeeRequest.address">
-            </div>
-            <div class="mb-3">
-              <div class="form-floating">
-                <select class="form-select" id="InputCountry" aria-label="Floating label select example" name="country" [(ngModel)] = "addEmployeeRequest.country">
-                  <option selected disabled>Open this select menu</option>
-                  <option value="Pakistan">Pakistan</option>
-                  <option value="United State">United State</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                </select>
-                <label for="InputCountry">Country</label>
-              </div>
-            </div>
-          <button type="submit" class="btn btn-primary me-2">Save</button> <a class="btn btn-danger" aria-current="page" routerLink="/employees">Back</a>
-        </form>
-      </div>
-    </div>
+<h1 class="mb-3">Add New Employee</h1>
+<div class="row">
+  <div class="col-6">
+    <form #form="ngForm" (ngSubmit)="saveUser()">
+        <div class="mb-3">
+          <label for="InputFirstName" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="InputFirstName" name="firstName" [(ngModel)] = "addEmployeeRequest.firstName">
+        </div>
+        <div class="mb-3">
+          <label for="InputLastName" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="InputLastName" name="lastName" [(ngModel)] = "addEmployeeRequest.lastName">
+        </div>
+        <div class="mb-3">
+          <label for="InputDOB" class="form-label">Date of Birth</label>
+          <input type="date" class="form-control" id="InputDOB" name="dob" [(ngModel)] = "addEmployeeRequest.dateOfBirth">
+        </div>
+        <div class="mb-3">
+          <div class="form-floating">
+            <select class="form-select" id="InputGender" aria-label="Floating label select example" name="gender" [(ngModel)] = "addEmployeeRequest.gender">
+              <option selected disabled>Open this select menu</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Prefer not to say">Prefer not to say</option>
+            </select>
+            <label for="InputGender">Gender</label>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="InputDateofJoin" class="form-label">Date of Join</label>
+          <input type="date" class="form-control" id="InputDateofJoin" name="joinedOn" [(ngModel)] = "addEmployeeRequest.joinedOn">
+        </div>
+        <div class="mb-3">
+          <label for="InputAddress" class="form-label">Address</label>
+          <input type="text" class="form-control" id="InputAddress" name="address" [(ngModel)] = "addEmployeeRequest.address">
+        </div>
+        <div class="mb-3">
+          <div class="form-floating">
+            <select class="form-select" id="InputCountry" aria-label="Floating label select example" name="country" [(ngModel)] = "addEmployeeRequest.country">
+              <option selected disabled>Open this select menu</option>
+              <option value="Pakistan">Pakistan</option>
+              <option value="United State">United State</option>
+              <option value="United Kingdom">United Kingdom</option>
+            </select>
+            <label for="InputCountry">Country</label>
+          </div>
+        </div>
+      <button type="submit" class="btn btn-primary me-2">Save</button> <a class="btn btn-danger" aria-current="page" routerLink="/employees">Back</a>
+    </form>
+  </div>
 </div>

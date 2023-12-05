@@ -14,7 +14,7 @@ export class AddEmployeeComponent implements OnInit {
     firstName: '',
     lastName: '',
     gender: '',
-    joinedOn: null,
+    joinedOn: new Date(),
     dateOfBirth: null,
     age: 0,
     address: '',
@@ -24,17 +24,32 @@ export class AddEmployeeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  addEmployee(){
-    this.addEmployeeRequest.id = '';
-    this.employeeService.addEmployee(this.addEmployeeRequest).subscribe(
-      {
-        next: (employee) => {
-          this.router.navigate(['employees']);
-        },
-        error: (response) => {
-          console.log(response);
-        }
-      }
-    );
+  onJoinedOnChange(event: any): void {
+    
   }
+
+
+  saveUser(): void {
+      const formData: FormData = new FormData();
+      // Append other properties
+      formData.append('id', this.addEmployeeRequest.id);
+      formData.append('firstName', this.addEmployeeRequest.firstName);
+      formData.append('lastName', this.addEmployeeRequest.lastName);
+      formData.append('gender', this.addEmployeeRequest.gender);
+      formData.append('joinedOn', this.addEmployeeRequest.joinedOn ? this.addEmployeeRequest.joinedOn.toISOString() : '');
+      formData.append('age', this.addEmployeeRequest.age?.toString() ?? '');
+      formData.append('address', this.addEmployeeRequest.address);
+      formData.append('country', this.addEmployeeRequest.country);
+      this.employeeService.addEmployee(formData).subscribe(
+        {
+          next: (employee) => {
+            this.router.navigate(['employees']);
+          },
+          error: (response) => {
+            console.log(response);
+          }
+        }
+      );
+    }
+
 }
